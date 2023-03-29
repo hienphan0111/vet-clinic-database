@@ -124,3 +124,73 @@ from animals
 where 
     extract (year from date_of_birth) between 1990 and 2000
 group by species;
+
+/* Write queries (using JOIN) to answer the following questions */
+
+-- What animals belong to Melody Pond? --
+
+select owners.owner_id, owners.full_name, animals.name, animals.owner_id
+from owners
+inner join animals
+    on owners.owner_id = animals.owner_id
+where owners.full_name = 'Melody Pond';
+
+-- List of all animals that are pokemon (their type is Pokemon). --
+
+select species.species_id, species.name, animals.name, animals.species_id
+from species
+inner join animals
+    on species.species_id = animals.species_id
+where species.name = 'Pokemon';
+
+-- List all owners and their animals, remember to include those that don't own any animal. --
+
+select owners.owner_id, owners.full_name, animals.name, animals.owner_id
+from owners
+left join animals
+    on owners.owner_id = animals.owner_id;
+
+-- How many animals are there per species? --
+
+select count(animals.id), species.name
+from species
+left join animals
+    on species.species_id = animals.species_id
+Group by species.name;
+
+-- List all Digimon owned by Jennifer Orwell.
+
+select owners.full_name, species.name, animals.name
+from owners
+inner join animals
+    on owners.owner_id = animals.owner_id
+inner join species
+    on animals.species_id = species.species_id
+where owners.full_name = 'Jennifer Orwell' and species.name = 'Digimon';
+
+-- List all animals owned by Dean Winchester that haven't tried to escape. --
+
+select owners.full_name, animals.name, animals.escape_attempts
+from owners
+left join animals
+    on owners.owner_id = animals.owner_id
+where owners.full_name = 'Dean Winchester' and animals.escape_attempts = 0;
+
+-- Who owns the most animals? --
+
+select full_name, my_count
+from (
+    select owners.full_name as full_name, count(animals.name) as my_count
+    from owners
+    left join animals
+        on owners.owner_id = animals.owner_id
+    group by owners.full_name
+) as animals_owners
+where my_count = ( select max(my_count) from (
+        select owners.full_name as full_name, count(animals.name) as my_count
+        from owners
+        left join animals
+            on owners.owner_id = animals.owner_id
+        group by owners.full_name
+    ) as animals_owners
+);
