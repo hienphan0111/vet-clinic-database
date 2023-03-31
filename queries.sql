@@ -194,3 +194,129 @@ where my_count = ( select max(my_count) from (
         group by owners.full_name
     ) as animals_owners
 );
+
+-- Who was the last animal seen by William Tatcher? --
+
+select vet_name, animal_name, date_of_visit
+from (
+    select vets.name as vet_name, animals.name as animal_name, visits.date_of_visit
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    where vets.name = 'William Tatcher'
+) as vets_animals_visits
+where date_of_visit = ( 
+    select max(visits.date_of_visit)
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    where vets.name = 'William Tatcher'
+) ;
+
+-- How many different animals did Stephanie Mendez see? --
+
+select count(animal_name)
+from (
+    select animals.name as animal_name
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    where vets.name = 'Stephanie Mendez'
+) as vets_animals_visits;
+
+-- List all vets and their specialties, including vets with no specialties.
+
+select vets.name, species.name 
+from vets
+left join specializations
+    on vets.id = specializations.vet_id
+left join species
+    on species.species_id = specializations.specie_id;
+
+-- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
+
+select vet_name, animal_name, date_of_visit
+from (
+    select vets.name as vet_name, animals.name as animal_name, visits.date_of_visit
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    where vets.name = 'Stephanie Mendez'
+) as vets_animals_visits
+where date_of_visit > '2020-04-01' and date_of_visit < '2020-08-30';
+
+-- What animal has the most visits to vets?
+
+select animal_name, count
+from (
+    select count(animals.name) as count, animals.name as animal_name
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    group by animals.name
+) as vets_animals_visits
+where count = (
+    select max(count) 
+    from (
+        select count(animals.name) as count
+        from visits
+        inner join vets on vets.id = visits.vet_id
+        inner join animals on animals.id = visits.animal_id
+        group by animals.name
+    ) as vets_animals_visits
+);
+
+-- Who was Maisy Smith's first visit?
+
+select vet_name, animal_name, date_of_visit
+from (
+    select vets.name as vet_name, animals.name as animal_name, visits.date_of_visit
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    where vets.name = 'Maisy Smith'
+) as vets_animals_visits
+where date_of_visit = ( 
+    select min(visits.date_of_visit)
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    where vets.name = 'Maisy Smith'
+) ;
+
+-- Details for most recent visit: animal information, vet information, and date of visit.
+
+select vet_name, animal_name, date_of_visit
+from (
+    select vets.name as vet_name, animals.name as animal_name, visits.date_of_visit
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+) as vets_animals_visits
+where date_of_visit = ( 
+    select min(visits.date_of_visit)
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+) ;
+
+-- How many visits were with a vet that did not specialize in that animal's species?
+
+SELECT COUNT(*)
+FROM visits v
+INNER JOIN animals a ON v.animal_id = a.id
+LEFT JOIN specializations s ON v.vet_id = s.vet_id AND a.species_id = s.specie_id
+WHERE s.vet_id IS NULL;
+
+-- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
+
+select species_name, count (*) as num_of_visits
+from (
+    select vets.name as vet_name, animals.name as animal_name, species.name as species_name, visits.date_of_visit
+    from visits
+    inner join vets on vets.id = visits.vet_id
+    inner join animals on animals.id = visits.animal_id
+    inner join species on animals.species_id = species.species_id
+    where vets.name = 'Maisy Smith'
+) as vets_animals_visits
+group by species_name;
