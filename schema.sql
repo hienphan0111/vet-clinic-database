@@ -57,3 +57,46 @@ add constraint fk_owner
         foreign key (owner_id)
         REFERENCES owners(id)
         on delete cascade;
+
+-- Create a table named vets
+
+create table vets (
+  id INT generated always as identity,
+  name varchar(100) NOT NULL,
+  age INT,
+  date_of_graduation date,
+  primary key (id)
+);
+
+-- Create a table named specializations --
+
+create table specializations (
+  vet_id INT,
+  specie_id INT,
+  primary key ( vet_id, specie_id),
+  constraint pk_vet 
+    foreign key (vet_id) 
+    REFERENCES vets(id)
+    on update cascade,
+  constraint pl_specie 
+    foreign key (specie_id) 
+    REFERENCES species(species_id)
+    on update cascade
+);
+
+-- Create a table named visits to handle relationship between animals and vets table --
+
+create table visits (
+  animal_id INT,
+  vet_id INT,
+  date_of_visit date,
+  constraint pk_animal
+    foreign key (animal_id) 
+    REFERENCES animals(id)
+    on update cascade,
+  constraint pk_vet 
+    foreign key (vet_id) 
+    REFERENCES vets(id)
+    on update cascade
+);
+
