@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+	<Controls>
+		<Table1>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="6"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table1"/>
+				<position value="402;140"/>
+				<size value="240;235"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table1>
+		<Table2>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="5"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table2"/>
+				<position value="795;281"/>
+				<size value="278;160"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table2>
+		<Table3>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="4"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table3"/>
+				<position value="393;479"/>
+				<size value="249;85"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table3>
+		<Table4>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="3"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table4"/>
+				<position value="817;504"/>
+				<size value="160;85"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table4>
+		<Table5>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="2"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table5"/>
+				<position value="795;630"/>
+				<size value="249;135"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table5>
+		<Table6>
+			<Parent value="#TOP"/>
+			<Properties>
+				<^checks value="0"/>
+				<^group value="-1"/>
+				<^height value="-1"/>
+				<^indexes value="0"/>
+				<^level value="1"/>
+				<^links value="0"/>
+				<^lock value="0"/>
+				<^methods value="0"/>
+				<^minimized value="0"/>
+				<^properties value="0"/>
+				<^triggers value="0"/>
+				<^uniques value="0"/>
+				<back_color value="B4D64700"/>
+				<name value="Table6"/>
+				<position value="795;58"/>
+				<size value="182;135"/>
+				<sort_fields value="1"/>
+			</Properties>
+			<Type value="Table"/>
+		</Table6>
+		<Vet_clinic>
+			<Properties>
+				<^lock value="0"/>
+				<back_color value="FFFFFF"/>
+				<font value=""/>
+				<gamma value="0"/>
+				<name value="Vet_clinic"/>
+				<size value="1680;2376"/>
+				<style value="4"/>
+				<style_links value="0"/>
+				<units value="5"/>
+			</Properties>
+			<Type value="Diagram"/>
+		</Vet_clinic>
+	</Controls>
+	<GUI>
+		<FullToolbarLeft value="1"/>
+		<FullToolbarRight value="1"/>
+		<HiddenLinks value=""/>
+		<PageEditor value="-1"/>
+		<PageEditorHRel value="0.000000"/>
+		<PageToolbarLeft value="0"/>
+		<PageToolbarRB value="0"/>
+		<PageToolbarRight value="0"/>
+		<ScrollX value="0"/>
+		<ScrollY value="0"/>
+		<Selection value="VmV0X2NsaW5pYw=="/>
+		<ShowAll value="1"/>
+		<ShowChanges value="1"/>
+		<ShowGL value="1"/>
+		<ShowGrid value="1"/>
+		<UseGrid value="0"/>
+	</GUI>
+	<Model>
+		<public>
+			<Links>
+				<o0>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="animals"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="owner_id"/>
+						<ID value="16672"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="fk_owner"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="owners"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="owner_id"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="16672"/>
+					<name value="fk_owner"/>
+				</o0>
+				<o1>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="animals"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="species_id"/>
+						<ID value="16667"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="fk_species"/>
+						<On_Delete value="Cascade"/>
+						<On_Update value="No Action"/>
+						<Parent_Table value="species"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="species_id"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="16667"/>
+					<name value="fk_species"/>
+				</o1>
+				<o2>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="specializations"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="specie_id"/>
+						<ID value="16693"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="pl_specie"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="species"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="species_id"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="16693"/>
+					<name value="pl_specie"/>
+				</o2>
+				<o3>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="specializations"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="vet_id"/>
+						<ID value="16688"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="pk_vet"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="vets"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="16688"/>
+					<name value="pk_vet"/>
+				</o3>
+				<o4>
+					<Changes value=""/>
+					<Properties>
+						<Cardinality value="ONE to MANY"/>
+						<Child_Table value="visits"/>
+						<Child_Table_Schema value="public"/>
+						<Comment value=""/>
+						<Foreign_Key value="animal_id"/>
+						<ID value="16713"/>
+						<Match_Types value="SIMPLE"/>
+						<Name value="pk_animal"/>
+						<On_Delete value="No Action"/>
+						<On_Update value="Cascade"/>
+						<Parent_Table value="animals"/>
+						<Parent_Table_Schema value="public"/>
+						<Primary_Key value="id"/>
+						<Schema value="public"/>
+					</Properties>
+					<control value=""/>
+					<delete value="0"/>
+					<id value="16713"/>
+					<name value="pk_animal"/>
+				</o4>
+			</Links>
+			<Tables>
+				<o0>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="9"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="owner_id"/>
+								<Nullable value="1"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="owner_id"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Cache value="1"/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Cycled value="0"/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Generated_Always value="0"/>
+								<Identity value="1"/>
+								<Increment value="1"/>
+								<Indexed value="1"/>
+								<Maximum value="2147483647"/>
+								<Minimum value="1"/>
+								<Name value="id"/>
+								<Nullable value="0"/>
+								<Sequence value="animals_id_seq"/>
+								<Start value="1"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="date_of_birth"/>
+								<Nullable value="0"/>
+								<Type value="Date"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="date_of_birth"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="escape_attempts"/>
+								<Nullable value="1"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="escape_attempts"/>
+						</o3>
+						<o4>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="5"/>
+								<Identity value="0"/>
+								<Name value="neutered"/>
+								<Nullable value="1"/>
+								<Type value="Boolean"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="neutered"/>
+						</o4>
+						<o5>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="6"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="weight_kg"/>
+								<Nullable value="1"/>
+								<Precision value="-1"/>
+								<Scale value="-1"/>
+								<Type value="Numeric"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="weight_kg"/>
+						</o5>
+						<o6>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="8"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="species_id"/>
+								<Nullable value="1"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="species_id"/>
+						</o6>
+						<o7>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="20"/>
+								<Name value="name"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="name"/>
+						</o7>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="8"/>
+						<ID value="16645"/>
+						<Index_Count value="0"/>
+						<Link_Count value="3"/>
+						<Method_Count value="0"/>
+						<Name value="animals"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id"/>
+						<Primary_Key_Name value="animals_pkey"/>
+						<Record_Count value="11"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table1"/>
+					<delete value="0"/>
+					<id value="16645"/>
+					<name value="animals"/>
+				</o0>
+				<o1>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Cache value="1"/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Cycled value="0"/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Generated_Always value="1"/>
+								<Identity value="1"/>
+								<Increment value="1"/>
+								<Indexed value="1"/>
+								<Maximum value="2147483647"/>
+								<Minimum value="1"/>
+								<Name value="owner_id"/>
+								<Nullable value="0"/>
+								<Sequence value="owners_id_seq"/>
+								<Start value="1"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="owner_id"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="age"/>
+								<Nullable value="1"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="age"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="full_name"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="full_name"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Length value="120"/>
+								<Name value="email"/>
+								<Nullable value="1"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="email"/>
+						</o3>
+					</Fields>
+					<Indexes>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Clustered value="0"/>
+								<Comment value=""/>
+								<Fields value="email	Asc	Last"/>
+								<Fields_Included value=""/>
+								<ID value="16727"/>
+								<Name value="idx_email"/>
+								<Text value="CREATE INDEX idx_email ON public.owners USING btree (email)"/>
+								<Type value="btree"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<id value="16727"/>
+							<name value="idx_email"/>
+						</o0>
+					</Indexes>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="4"/>
+						<ID value="16654"/>
+						<Index_Count value="1"/>
+						<Link_Count value="1"/>
+						<Method_Count value="0"/>
+						<Name value="owners"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="owner_id"/>
+						<Primary_Key_Name value="owners_pkey"/>
+						<Record_Count value="~32500006"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table2"/>
+					<delete value="0"/>
+					<id value="16654"/>
+					<name value="owners"/>
+				</o1>
+				<o2>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Cache value="1"/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Cycled value="0"/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Generated_Always value="1"/>
+								<Identity value="1"/>
+								<Increment value="1"/>
+								<Indexed value="1"/>
+								<Maximum value="2147483647"/>
+								<Minimum value="1"/>
+								<Name value="species_id"/>
+								<Nullable value="0"/>
+								<Sequence value="species_species_id_seq"/>
+								<Start value="1"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="species_id"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="name"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="name"/>
+						</o1>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="2"/>
+						<ID value="16660"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="species"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="species_id"/>
+						<Primary_Key_Name value="species_pkey"/>
+						<Record_Count value="2"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table3"/>
+					<delete value="0"/>
+					<id value="16660"/>
+					<name value="species"/>
+				</o2>
+				<o3>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="vet_id"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vet_id"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="specie_id"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="specie_id"/>
+						</o1>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="2"/>
+						<ID value="16683"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="specializations"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="vet_id
+specie_id"/>
+						<Primary_Key_Name value="specializations_pkey"/>
+						<Record_Count value="4"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table4"/>
+					<delete value="0"/>
+					<id value="16683"/>
+					<name value="specializations"/>
+				</o3>
+				<o4>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Cache value="1"/>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Cycled value="0"/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Generated_Always value="1"/>
+								<Identity value="1"/>
+								<Increment value="1"/>
+								<Indexed value="1"/>
+								<Maximum value="2147483647"/>
+								<Minimum value="1"/>
+								<Name value="id"/>
+								<Nullable value="0"/>
+								<Sequence value="vets_id_seq"/>
+								<Start value="1"/>
+								<Type value="Integer"/>
+								<Unique value="1"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="id"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="age"/>
+								<Nullable value="1"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="age"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="4"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="date_of_graduation"/>
+								<Nullable value="1"/>
+								<Type value="Date"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="date_of_graduation"/>
+						</o2>
+						<o3>
+							<Changes value=""/>
+							<Properties>
+								<Collation value='"pg_catalog"."default"'/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Length value="100"/>
+								<Name value="name"/>
+								<Nullable value="0"/>
+								<Type value="Character Varying"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="name"/>
+						</o3>
+					</Fields>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="4"/>
+						<ID value="16678"/>
+						<Index_Count value="0"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="vets"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value="id"/>
+						<Primary_Key_Name value="vets_pkey"/>
+						<Record_Count value="4"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table5"/>
+					<delete value="0"/>
+					<id value="16678"/>
+					<name value="vets"/>
+				</o4>
+				<o5>
+					<Changes value=""/>
+					<Fields>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="1"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="animal_id"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="animal_id"/>
+						</o0>
+						<o1>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="2"/>
+								<Identity value="0"/>
+								<Indexed value="1"/>
+								<Name value="vet_id"/>
+								<Nullable value="0"/>
+								<Type value="Integer"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="vet_id"/>
+						</o1>
+						<o2>
+							<Changes value=""/>
+							<Properties>
+								<Collation value=""/>
+								<Comment value=""/>
+								<Default_Value value=""/>
+								<Dimensions value="0"/>
+								<Field_Position value="3"/>
+								<Identity value="0"/>
+								<Indexed value="0"/>
+								<Name value="date_of_visit"/>
+								<Nullable value="1"/>
+								<Type value="Date"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<name value="date_of_visit"/>
+						</o2>
+					</Fields>
+					<Indexes>
+						<o0>
+							<Changes value=""/>
+							<Properties>
+								<Clustered value="0"/>
+								<Comment value=""/>
+								<Fields value="vet_id	Asc	Last"/>
+								<Fields_Included value=""/>
+								<ID value="16726"/>
+								<Name value="idx_vet_id"/>
+								<Text value="CREATE INDEX idx_vet_id ON public.visits USING btree (vet_id)"/>
+								<Type value="btree"/>
+								<Unique value="0"/>
+							</Properties>
+							<control value=""/>
+							<delete value="0"/>
+							<id value="16726"/>
+							<name value="idx_vet_id"/>
+						</o0>
+					</Indexes>
+					<Properties>
+						<Check_Count value="0"/>
+						<Comment value=""/>
+						<Field_Count value="3"/>
+						<ID value="16698"/>
+						<Index_Count value="1"/>
+						<Link_Count value="2"/>
+						<Method_Count value="0"/>
+						<Name value="visits"/>
+						<Object_Owner value="postgres"/>
+						<Primary_Key value=""/>
+						<Primary_Key_Name value=""/>
+						<Record_Count value="~51398224"/>
+						<Schema value="public"/>
+						<Temporary value="0"/>
+						<Trigger_Count value="0"/>
+						<Unique_Count value="0"/>
+					</Properties>
+					<control value="Table6"/>
+					<delete value="0"/>
+					<id value="16698"/>
+					<name value="visits"/>
+				</o5>
+			</Tables>
+		</public>
+	</Model>
+	<Scene>
+		<HeightPX value="2376"/>
+		<MarginBottom value="0"/>
+		<MarginLeft value="0"/>
+		<MarginRight value="0"/>
+		<MarginTop value="0"/>
+		<PageHeight value="2376"/>
+		<PageWidth value="1680"/>
+		<PagesH value="1"/>
+		<PagesV value="1"/>
+		<WidthPX value="1680"/>
+	</Scene>
+	<version value="130100"/>
+</properties>
+
